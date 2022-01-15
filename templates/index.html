@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker-Board</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+</head>
+<body>
+
+    <!-- y divides 2 -->
+    <!-- z divides 2 -->
+    <!-- i divides 2 -->
+
+    <center>
+        <h1>Checker-Board</h1>
+        <table>
+            {%for y in range(0,x_axis) %}
+                <tr>
+                        {%for z in range(0,y_axis)%}
+                           <td class="two"></td>
+                           <td class="one"></td>
+                        {%endfor%}
+
+                </tr>
+                <tr>
+                    {%for i in range(0,y_axis)%}
+                        <td class="one"></td>
+                        <td class="two"></td>
+                    {%endfor%}
+
+                </tr>
+            {%endfor%}
+
+
+        </table>
+    </center>
+</body>
+</html>
+
